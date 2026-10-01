@@ -14,7 +14,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [studioTime, setStudioTime] = useState('');
   const lenis = useLenis();
 
@@ -139,7 +139,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </a>
               <div className="flex items-start gap-3 text-sm font-bold text-gray-600">
                 <MapPointBoldDuotoneIcon className="w-4 h-4 shrink-0 mt-0.5 text-brand-blue" />
-                <span>Istanbul, Turkey</span>
+                <span>{language === 'tr' ? 'Trabzon, Türkiye' : 'Trabzon, Turkey'}</span>
               </div>
             </div>
           </div>
