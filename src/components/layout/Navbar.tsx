@@ -166,18 +166,27 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Mobile Right Controls: Compact CTA + Hamburger Menu */}
-          <div className="flex md:hidden items-center gap-1">
+          {/* Mobile Right Controls: Language Toggle + Compact CTA + Hamburger Menu */}
+          <div className="flex md:hidden items-center gap-1 sm:gap-1.5">
+            <button
+              type="button"
+              onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
+              className="px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-[11px] font-extrabold text-gray-800 active:scale-95 transition-all border border-gray-200/60"
+              title={language === 'en' ? 'Türkçe' : 'English'}
+            >
+              {language === 'en' ? 'TR' : 'EN'}
+            </button>
+
             <button
               onClick={onOpenContact}
-              className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-bold bg-brand-blue text-white shadow-sm active:scale-95 transition-transform"
+              className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-bold bg-brand-blue text-white shadow-sm active:scale-95 transition-transform"
             >
               {t.nav.startProject}
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-900 transition-colors cursor-pointer active:scale-90"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-900 transition-colors cursor-pointer active:scale-90"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {mobileMenuOpen ? <CloseCircleBoldDuotoneIcon className="w-5 h-5 text-brand-blue" /> : <HamburgerMenuBoldDuotoneIcon className="w-5 h-5" />}

@@ -16,14 +16,14 @@ const WorksPage = lazy(() => import('./pages/WorksPage').then(module => ({ defau
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
 
 const lenisOptions = {
-  lerp: 0.075,
+  lerp: 0.08,
   duration: 1.2,
   easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   orientation: 'vertical' as const,
   gestureOrientation: 'vertical' as const,
   smoothWheel: true,
-  wheelMultiplier: 1.0,
-  touchMultiplier: 1.2,
+  syncTouch: false,
+  touchMultiplier: 0,
   autoRaf: true,
 };
 
@@ -78,14 +78,16 @@ const AppContent: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const lenis = useLenis();
 
-  // Handle modal and preloader scroll locks with Lenis
+  // Handle modal scroll locks with Lenis & body style (only when modal is actively open)
   useEffect(() => {
-    if (isLoading || isContactOpen || Boolean(selectedProject)) {
+    if (isContactOpen || Boolean(selectedProject)) {
       lenis?.stop();
+      document.body.style.overflow = 'hidden';
     } else {
       lenis?.start();
+      document.body.style.overflow = '';
     }
-  }, [isLoading, isContactOpen, selectedProject, lenis]);
+  }, [isContactOpen, selectedProject, lenis]);
 
   useEffect(() => {
     const handleHash = () => {

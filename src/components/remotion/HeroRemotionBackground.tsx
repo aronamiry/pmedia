@@ -28,26 +28,26 @@ interface FloatingIconItem {
 const floatingItems: FloatingIconItem[] = [
   {
     id: 'cinema-cam',
-    leftPercent: 10,
-    topPercent: 18,
+    leftPercent: 12,
+    topPercent: 82,
     icon: VideocameraRecordBoldDuotoneIcon,
     iconColor: '#2563EB',
     borderColor: 'rgba(37, 99, 235, 0.45)',
     glowColor: 'rgba(37, 99, 235, 0.22)',
     tag: { tr: 'SİNEMA 4K', en: 'CINEMA 4K' },
-    scale: 1.05,
+    scale: 0.95,
     animClass: 'animate-float-1',
-    hideOnMobile: true,
+    hideOnMobile: false,
   },
   {
     id: 'creative-stars',
-    leftPercent: 22,
-    topPercent: 11,
+    leftPercent: 18,
+    topPercent: 12,
     icon: StarsBoldDuotoneIcon,
     iconColor: '#F43F5E',
     borderColor: 'rgba(244, 63, 94, 0.45)',
     glowColor: 'rgba(244, 63, 94, 0.22)',
-    scale: 1.08,
+    scale: 1.05,
     animClass: 'animate-float-2',
     hideOnMobile: false,
   },
@@ -79,28 +79,28 @@ const floatingItems: FloatingIconItem[] = [
   },
   {
     id: 'studio-heart',
-    leftPercent: 78,
-    topPercent: 12,
+    leftPercent: 84,
+    topPercent: 14,
     icon: HeartBoldDuotoneIcon,
     iconColor: '#FF3366',
     borderColor: 'rgba(255, 51, 102, 0.45)',
     glowColor: 'rgba(255, 51, 102, 0.24)',
-    scale: 1.1,
+    scale: 1.08,
     animClass: 'animate-float-2',
     hideOnMobile: false,
   },
   {
     id: 'clapper-edit',
-    leftPercent: 89,
-    topPercent: 38,
+    leftPercent: 82,
+    topPercent: 80,
     icon: ClapperboardPlayBoldDuotoneIcon,
     iconColor: '#8B5CF6',
     borderColor: 'rgba(139, 92, 246, 0.45)',
     glowColor: 'rgba(139, 92, 246, 0.22)',
     tag: { tr: 'KURGU & RENK', en: 'POST & EDIT' },
-    scale: 1.02,
+    scale: 0.95,
     animClass: 'animate-float-3',
-    hideOnMobile: true,
+    hideOnMobile: false,
   },
   {
     id: 'play-reel',
@@ -191,10 +191,10 @@ export const HeroRemotionBackground: React.FC<HeroRemotionBackgroundProps> = ({ 
               }}
             >
               <div
-                className="inline-flex items-center rounded-full bg-white/95 backdrop-blur-xl transition-transform hover:scale-105"
+                className={`inline-flex items-center rounded-full bg-white/95 backdrop-blur-xl transition-transform hover:scale-105 ${
+                  labelText ? 'px-2.5 py-1.5 sm:px-4 sm:py-2 gap-1.5 sm:gap-2.5' : 'p-2 sm:p-3'
+                }`}
                 style={{
-                  gap: labelText ? '10px' : '0px',
-                  padding: labelText ? '9px 18px 9px 14px' : '13px',
                   border: `2px solid ${item.borderColor}`,
                   boxShadow: `0 14px 35px -8px ${item.glowColor}, 0 0 1px 1px rgba(0, 0, 0, 0.04), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95)`,
                 }}
@@ -208,13 +208,13 @@ export const HeroRemotionBackground: React.FC<HeroRemotionBackgroundProps> = ({ 
                     justifyContent: 'center',
                   }}
                 >
-                  <IconComponent size={labelText ? 24 : 28} />
+                  <IconComponent size={labelText ? 20 : 24} className="sm:w-6 sm:h-6" />
                 </div>
 
                 {/* Micro-Tag */}
                 {labelText && (
-                  <div className="flex items-center gap-2">
-                    <span className="text-[12px] sm:text-[13px] font-extrabold tracking-wider uppercase text-gray-900 whitespace-nowrap font-sans">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="text-[10px] sm:text-[13px] font-extrabold tracking-wider uppercase text-gray-900 whitespace-nowrap font-sans">
                       {labelText}
                     </span>
                     <span
