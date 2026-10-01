@@ -28,7 +28,7 @@ interface FloatingIconItem {
 const floatingItems: FloatingIconItem[] = [
   {
     id: 'cinema-cam',
-    leftPercent: 12,
+    leftPercent: 10,
     topPercent: 82,
     icon: VideocameraRecordBoldDuotoneIcon,
     iconColor: '#2563EB',
@@ -41,7 +41,7 @@ const floatingItems: FloatingIconItem[] = [
   },
   {
     id: 'creative-stars',
-    leftPercent: 18,
+    leftPercent: 16,
     topPercent: 12,
     icon: StarsBoldDuotoneIcon,
     iconColor: '#F43F5E',
@@ -53,29 +53,29 @@ const floatingItems: FloatingIconItem[] = [
   },
   {
     id: 'energy-bolt',
-    leftPercent: 8,
-    topPercent: 48,
+    leftPercent: 7,
+    topPercent: 44,
     icon: BoltBoldDuotoneIcon,
     iconColor: '#F59E0B',
     borderColor: 'rgba(245, 158, 11, 0.5)',
     glowColor: 'rgba(245, 158, 11, 0.22)',
     tag: { tr: 'VİRAL HIZ', en: 'VIRAL SPEED' },
-    scale: 0.98,
+    scale: 0.92,
     animClass: 'animate-float-3',
-    hideOnMobile: true,
+    hideOnMobile: false,
   },
   {
     id: 'photo-lens',
-    leftPercent: 15,
-    topPercent: 74,
+    leftPercent: 14,
+    topPercent: 66,
     icon: CameraMinimalisticBoldDuotoneIcon,
     iconColor: '#10B981',
     borderColor: 'rgba(16, 185, 129, 0.45)',
     glowColor: 'rgba(16, 185, 129, 0.2)',
     tag: { tr: 'HAM ÇEKİM', en: 'RAW STILL' },
-    scale: 1.0,
+    scale: 0.95,
     animClass: 'animate-float-1',
-    hideOnMobile: true,
+    hideOnMobile: false,
   },
   {
     id: 'studio-heart',
@@ -91,8 +91,8 @@ const floatingItems: FloatingIconItem[] = [
   },
   {
     id: 'clapper-edit',
-    leftPercent: 82,
-    topPercent: 80,
+    leftPercent: 84,
+    topPercent: 82,
     icon: ClapperboardPlayBoldDuotoneIcon,
     iconColor: '#8B5CF6',
     borderColor: 'rgba(139, 92, 246, 0.45)',
@@ -104,28 +104,28 @@ const floatingItems: FloatingIconItem[] = [
   },
   {
     id: 'play-reel',
-    leftPercent: 80,
-    topPercent: 68,
+    leftPercent: 88,
+    topPercent: 44,
     icon: PlayBoldDuotoneIcon,
     iconColor: '#0284C7',
     borderColor: 'rgba(2, 132, 199, 0.45)',
     glowColor: 'rgba(2, 132, 199, 0.22)',
     tag: { tr: 'PRORES REELS', en: 'PRORES REEL' },
-    scale: 1.0,
+    scale: 0.95,
     animClass: 'animate-float-1',
-    hideOnMobile: true,
+    hideOnMobile: false,
   },
   {
     id: 'layers-mesh',
-    leftPercent: 91,
-    topPercent: 62,
+    leftPercent: 82,
+    topPercent: 64,
     icon: LayersMinimalisticBoldDuotoneIcon,
     iconColor: '#06B6D4',
     borderColor: 'rgba(6, 182, 212, 0.45)',
     glowColor: 'rgba(6, 182, 212, 0.2)',
-    scale: 1.05,
+    scale: 1.0,
     animClass: 'animate-float-2',
-    hideOnMobile: true,
+    hideOnMobile: false,
   },
 ];
 
@@ -172,7 +172,7 @@ export const HeroRemotionBackground: React.FC<HeroRemotionBackgroundProps> = ({ 
       </svg>
 
       {/* 2. FLOATING BADGES (Hardware-accelerated CSS animations) */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none">
         {floatingItems.map((item) => {
           const IconComponent = item.icon;
           const labelText = item.tag ? (language === 'tr' ? item.tag.tr : item.tag.en) : null;
@@ -180,7 +180,7 @@ export const HeroRemotionBackground: React.FC<HeroRemotionBackgroundProps> = ({ 
           return (
             <div
               key={item.id}
-              className={`absolute transform -translate-x-1/2 -translate-y-1/2 ${item.animClass} ${
+              className={`absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none ${item.animClass} ${
                 item.hideOnMobile ? 'hidden md:block' : 'block'
               }`}
               style={{

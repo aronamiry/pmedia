@@ -177,7 +177,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="bg-white overflow-x-clip w-full min-h-screen relative">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 overflow-hidden">
+      <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 overflow-x-clip">
         
         {/* Remotion Dynamic Background with Language Switch and Floating Badges */}
         <HeroRemotionBackground language={language} />
@@ -198,14 +198,14 @@ export const HomePage: React.FC<HomePageProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               style={{ y: floatImg1Y }}
-              className="block absolute -top-12 -right-3 xs:-top-14 xs:-right-6 sm:-top-16 sm:-right-32 md:-right-56 w-16 xs:w-24 sm:w-40 md:w-52 aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(37,99,235,0.35)] rotate-6 animate-float border-[3px] sm:border-[5px] border-blue-400/90 ring-2 ring-blue-500/30 -z-10 bg-gray-100"
+              className="block absolute -top-12 -right-3 xs:-top-14 xs:-right-6 sm:-top-16 sm:-right-32 md:-right-56 w-16 xs:w-24 sm:w-40 md:w-52 aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(37,99,235,0.35)] rotate-6 animate-float border-[3px] sm:border-[5px] border-blue-400/90 ring-2 ring-blue-500/30 -z-10 bg-gray-100 pointer-events-none select-none"
             >
               <img 
                 fetchPriority="high" 
                 decoding="async" 
                 src="/media/photography/akdingold-editorial-high-fashion-portrait.jpg" 
                 alt="High Fashion Editorial" 
-                className="w-full h-full object-cover object-top opacity-95" 
+                className="w-full h-full object-cover object-top opacity-95 pointer-events-none select-none" 
               />
             </motion.div>
 
@@ -215,14 +215,14 @@ export const HomePage: React.FC<HomePageProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               style={{ y: floatImg2Y }}
-              className="block absolute -bottom-10 -left-3 xs:-bottom-14 xs:-left-6 sm:-bottom-16 sm:-left-32 md:-left-56 w-14 xs:w-20 sm:w-36 md:w-48 aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(244,63,94,0.35)] -rotate-12 animate-float border-[3px] sm:border-[5px] border-rose-400/90 ring-2 ring-rose-500/30 -z-10 bg-gray-100 [animation-delay:1.5s]"
+              className="block absolute -bottom-10 -left-3 xs:-bottom-14 xs:-left-6 sm:-bottom-16 sm:-left-32 md:-left-56 w-14 xs:w-20 sm:w-36 md:w-48 aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(244,63,94,0.35)] -rotate-12 animate-float border-[3px] sm:border-[5px] border-rose-400/90 ring-2 ring-rose-500/30 -z-10 bg-gray-100 [animation-delay:1.5s] pointer-events-none select-none"
             >
               <img 
                 fetchPriority="high" 
                 decoding="async" 
                 src="/media/photography/still-shoes-rhinestone-boots-fur-lookbook.jpg" 
                 alt="Fashion Lookbook" 
-                className="w-full h-full object-cover object-center opacity-95" 
+                className="w-full h-full object-cover object-center opacity-95 pointer-events-none select-none" 
               />
             </motion.div>
 

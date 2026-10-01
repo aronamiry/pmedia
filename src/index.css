@@ -25,7 +25,6 @@
     font-size: 75%;
     font-family: var(--font-sans);
     -webkit-tap-highlight-color: transparent;
-    overflow-x: clip;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -49,7 +48,6 @@
   body {
     background-color: var(--color-bg-base);
     color: var(--color-text-primary);
-    overflow-x: clip;
     min-height: 100vh;
     min-height: 100dvh;
     -webkit-overflow-scrolling: touch;

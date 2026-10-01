@@ -119,14 +119,14 @@ const AppContent: React.FC = () => {
         {isLoading && <Preloader key="preloader" onComplete={() => setIsLoading(false)} />}
       </AnimatePresence>
       
-      <div className="min-h-screen bg-white text-gray-900 flex flex-col font-sans selection:bg-gray-900 selection:text-white relative">
+      <div className="min-h-screen bg-white text-gray-900 flex flex-col font-sans selection:bg-gray-900 selection:text-white relative w-full overflow-x-clip">
         <Navbar
           currentPage={currentPage}
           setCurrentPage={handleNavigate}
           onOpenContact={() => setIsContactOpen(true)}
         />
 
-        <main className="flex-1">
+        <main className="flex-1 w-full">
           <AnimatePresence mode="wait" initial={false}>
             {currentPage === 'home' && (
               <PageWrapper id="home">
@@ -177,13 +177,29 @@ const AppContent: React.FC = () => {
 };
 
 export function App() {
-  return (
-    <ReactLenis root options={lenisOptions}>
-      <LanguageProvider>
-        <AppContent />
-      </LanguageProvider>
-    </ReactLenis>
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Only enable Lenis smooth scrolling on desktop devices with mouse/trackpad
+    const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    setIsDesktop(!isTouch);
+  }, []);
+
+  const content = (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
+
+  if (isDesktop) {
+    return (
+      <ReactLenis root options={lenisOptions}>
+        {content}
+      </ReactLenis>
+    );
+  }
+
+  return content;
 }
 
 export default App;
