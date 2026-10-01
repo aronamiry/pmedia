@@ -38,16 +38,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     if (mobileMenuOpen) {
       lenis?.stop();
       document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
     } else {
       lenis?.start();
       document.body.style.overflow = '';
-      document.body.style.touchAction = '';
     }
     return () => {
       lenis?.start();
       document.body.style.overflow = '';
-      document.body.style.touchAction = '';
     };
   }, [mobileMenuOpen, lenis]);
 

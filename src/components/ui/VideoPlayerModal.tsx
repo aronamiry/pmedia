@@ -21,6 +21,8 @@ export const VideoPlayerModal: React.FC<VideoPlayerModalProps> = ({ project, onC
   const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
+    if (!project) return;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
@@ -28,14 +30,12 @@ export const VideoPlayerModal: React.FC<VideoPlayerModalProps> = ({ project, onC
 
     // Body scroll lock on mobile/desktop
     document.body.style.overflow = 'hidden';
-    document.body.style.touchAction = 'none';
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
-      document.body.style.touchAction = '';
     };
-  }, [onClose]);
+  }, [project, onClose]);
 
   if (!project) return null;
 
