@@ -21,10 +21,14 @@
 
 @layer base {
   html {
-    font-size: 75%;
+    font-size: 97.5%;
     font-family: var(--font-sans);
     -webkit-tap-highlight-color: transparent;
     -webkit-overflow-scrolling: touch;
+  }
+
+  p {
+    font-weight: 600;
   }
 
   /* Sleek Icy Scrollbar */

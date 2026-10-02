@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
             <span className="text-2xl font-bold tracking-tight text-gray-900 font-sans">
               PM.Media
             </span>
-            <p className="text-gray-500 font-medium">
+            <p className="text-sm sm:text-base text-gray-700 font-bold leading-relaxed">
               {t.footer.manifesto}
             </p>
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white border border-gray-100 text-xs font-bold text-gray-500 shadow-sm">

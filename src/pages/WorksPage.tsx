@@ -75,7 +75,7 @@ export const WorksPage: React.FC<WorksPageProps> = ({ onSelectProject, onOpenCon
           {t.worksPage.title}
         </h1>
 
-        <p className="text-sm sm:text-xl text-gray-500 font-medium leading-relaxed">
+        <p className="text-base sm:text-xl md:text-2xl text-gray-800 font-bold leading-relaxed">
           {t.worksPage.subtitle}
         </p>
       </motion.div>
@@ -216,7 +216,7 @@ export const WorksPage: React.FC<WorksPageProps> = ({ onSelectProject, onOpenCon
             <h2 className="text-2xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
               {t.worksPage.verticalRoomTitle}
             </h2>
-            <p className="text-xs sm:text-base text-gray-400 font-medium leading-relaxed">
+            <p className="text-sm sm:text-lg md:text-xl text-gray-200 font-bold leading-relaxed">
               {t.worksPage.verticalRoomSubtitle}
             </p>
           </div>

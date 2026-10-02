@@ -178,7 +178,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
             {t.servicesPage.title}
           </h1>
 
-          <p className="text-sm sm:text-lg text-gray-200 font-medium leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-xl text-gray-100 font-bold leading-relaxed max-w-2xl">
             {t.servicesPage.subtitle}
           </p>
         </div>
@@ -237,7 +237,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
                 </div>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-800 font-bold leading-relaxed">
                   {service.description[language]}
                 </p>
 
@@ -248,14 +248,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
                   
                   {/* Scope / Core Disciplines */}
                   <div className={isFlagship ? 'md:col-span-7 space-y-2' : 'space-y-2'}>
-                    <span className={`text-[10px] font-bold uppercase tracking-wider ${theme.accentText} font-sans block`}>
+                    <span className={`text-xs font-bold uppercase tracking-wider ${theme.accentText} font-sans block`}>
                       {t.servicesPage.scopeTitle}
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {service.items[language].slice(0, isFlagship ? 6 : 4).map((item, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 border border-gray-200/80 text-[11px] font-semibold text-gray-700 shadow-2xs hover:bg-white hover:border-gray-300 transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-gray-200 text-xs sm:text-sm font-bold text-gray-800 shadow-2xs hover:bg-white hover:border-gray-300 transition-colors"
                         >
                           <CheckCircleBoldDuotoneIcon size={13} className={theme.accentText} />
                           <span>{item}</span>
@@ -266,10 +266,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
 
                   {/* Deliverables List */}
                   <div className={isFlagship ? 'md:col-span-5 space-y-2 md:border-l md:border-gray-100 md:pl-6' : 'space-y-2 pt-2 border-t border-gray-100'}>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 font-sans block">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400 font-sans block">
                       {t.servicesPage.deliverablesTitle}
                     </span>
-                    <ul className="space-y-1.5 text-[11px] sm:text-xs font-medium text-gray-600">
+                    <ul className="space-y-1.5 text-xs sm:text-sm font-bold text-gray-700">
                       {service.deliverables[language].slice(0, 3).map((deliv, idx) => (
                         <li key={idx} className="flex items-center gap-2">
                           <span className={`w-1.5 h-1.5 rounded-full ${theme.accentDot} shrink-0`} />
@@ -285,7 +285,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
 
               {/* Bottom Row: Tagline + Start CTA (Stacks gracefully on phones) */}
               <div className="pt-4 border-t border-gray-100/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 relative z-10">
-                <span className="text-[11px] font-semibold text-gray-400 font-sans truncate">
+                <span className="text-xs sm:text-sm font-bold text-gray-500 font-sans truncate">
                   {service.tagline[language]}
                 </span>
 
@@ -337,14 +337,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
                   <h3 className="text-xl sm:text-3xl font-extrabold text-gray-900 mb-1.5 font-sans tracking-tight">
                     {pkg.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-800 font-bold leading-relaxed">
                     {pkg.desc}
                   </p>
                 </div>
 
                 <ul className="space-y-2 sm:space-y-2.5 pt-4 border-t border-gray-100">
                   {pkg.bullets.map((b, i) => (
-                    <li key={i} className="text-xs sm:text-sm font-semibold text-gray-700 flex items-center gap-2.5">
+                    <li key={i} className="text-sm sm:text-base font-bold text-gray-800 flex items-center gap-2.5">
                       <CheckCircleBoldDuotoneIcon size={16} className="text-brand-blue shrink-0" />
                       <span>{b}</span>
                     </li>
@@ -382,7 +382,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenContact }) => 
           “{t.servicesPage.endCtaTitle}”
         </h2>
 
-        <p className="relative z-10 text-sm sm:text-xl text-gray-400 max-w-xl mx-auto font-medium">
+        <p className="relative z-10 text-base sm:text-2xl text-gray-200 max-w-xl mx-auto font-bold">
           {t.servicesPage.endCtaSubtitle}
         </p>
 

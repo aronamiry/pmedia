@@ -235,6 +235,13 @@ export const HomePage: React.FC<HomePageProps> = ({
             </motion.div>
           </motion.div>
 
+          <motion.p
+            variants={fadeInUp}
+            className="text-lg sm:text-2xl md:text-3xl text-gray-800 font-bold max-w-3xl mx-auto leading-relaxed font-sans"
+          >
+            {t.hero.subheadline}
+          </motion.p>
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -338,7 +345,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 {language === 'tr' ? 'Projelerimiz' : 'Our cases'}
               </h2>
             </div>
-            <p className="max-w-md text-gray-500 font-medium leading-relaxed text-sm sm:text-base md:text-right">
+            <p className="max-w-md text-gray-800 font-bold leading-relaxed text-base sm:text-lg md:text-right">
               {language === 'tr' 
                 ? 'Her görsel ve film, markanıza özel kreatif bir prodüksiyon disipliniyle şekillenir. Fotoğrafa veya etikete tıklayarak doğrudan ilgili hizmete gidin.' 
                 : 'Every film and still is anchored in a specialized creative discipline. Click any photo or service tag to explore that service.'}
@@ -598,7 +605,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
               {t.servicesOverview.tag}
             </h2>
-            <p className="text-gray-500 font-medium max-w-lg mx-auto text-sm sm:text-base md:text-lg">
+            <p className="text-gray-800 font-bold max-w-lg mx-auto text-base sm:text-lg md:text-xl">
               {language === 'tr' 
                 ? 'Fikirden nihai yayına kadar uçtan uca prodüksiyon gücü.' 
                 : 'End-to-end production mastery from initial spark to final delivery.'}
@@ -634,7 +641,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-blue mb-3 sm:mb-4">
                   01 {language === 'tr' ? 'Fikir & Strateji' : 'Concept & Strategy'}
                 </h3>
-                <p className="text-gray-700 font-medium text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+                <p className="text-gray-800 font-bold text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
                   {t.process.steps[0].desc}
                 </p>
               </motion.div>
@@ -668,7 +675,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
                   02 {language === 'tr' ? 'Prodüksiyon' : 'Production'}
                 </h3>
-                <p className="text-gray-600 font-medium text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+                <p className="text-gray-800 font-bold text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
                   {t.process.steps[2].desc}
                 </p>
               </motion.div>
@@ -702,7 +709,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
                   03 {language === 'tr' ? 'Kurgu & Dağıtım' : 'Post-Production'}
                 </h3>
-                <p className="text-white/95 font-medium text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+                <p className="text-white font-bold text-base sm:text-lg md:text-xl max-w-xl leading-relaxed">
                   {t.process.steps[3].desc}
                 </p>
               </motion.div>
@@ -742,7 +749,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
               {language === 'tr' ? 'Konuşan Rakamlar' : 'Numbers that speak'}
             </h2>
-            <p className="text-gray-500 font-medium max-w-md mx-auto text-sm sm:text-base md:text-lg">
+            <p className="text-gray-800 font-bold max-w-md mx-auto text-base sm:text-lg md:text-xl">
               {language === 'tr' 
                 ? 'Strateji, tasarım ve büyüme genelindeki etkimizi kanıtlayan etkileyici metrikler.' 
                 : 'Impressive metrics that prove our effectiveness across strategy, production, and growth.'}
@@ -773,7 +780,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className={`text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter ${metric.color}`}>
                   {metric.value}
                 </div>
-                <div className="text-[11px] sm:text-sm font-bold text-gray-500 uppercase tracking-wider">
+                <div className="text-xs sm:text-sm font-black text-gray-700 uppercase tracking-wider">
                   {metric.label}
                 </div>
               </motion.div>

@@ -229,7 +229,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-gray-600 font-sans font-medium leading-relaxed max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-gray-800 font-sans font-bold leading-relaxed max-w-3xl mx-auto"
           >
             {language === 'tr'
               ? 'İşletmelerin %90’ı pazarlamayı verimsiz bir masraf olarak görür çünkü geleneksel ajansların sunduğu sıkıcı videolar ve sahte tıklamalar satış getirmez. 2026 dikkat ekonomisinde kazananlar; sinema kalitesinde görsel prestij ve ilk 1.5 saniyede kaydırmayı durduran kreatif mühendislik üretenlerdir.'
@@ -305,8 +305,8 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                 {stat.value}
               </div>
               <div>
-                <h4 className="text-xs sm:text-sm font-bold text-gray-900 font-sans">{stat.label}</h4>
-                <p className="text-[11px] sm:text-xs text-gray-500 font-medium leading-relaxed mt-0.5">{stat.desc}</p>
+                <h4 className="text-sm sm:text-base font-black text-gray-950 font-sans">{stat.label}</h4>
+                <p className="text-xs sm:text-sm text-gray-700 font-bold leading-relaxed mt-1">{stat.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -326,7 +326,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                 ? 'Reddit ve Sektörün Acı İtirafı: "Pazarlamam Neden Çalışmıyor?"'
                 : 'What Founders on Reddit Admit: "Why Isn’t My Marketing Working?"'}
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base font-medium mt-3 leading-relaxed">
+            <p className="text-gray-800 text-base sm:text-lg font-bold mt-3 leading-relaxed">
               {language === 'tr'
                 ? 'r/entrepreneur, r/ecommerce ve r/marketing topluluklarında her gün binlerce işletme sahibinin tartıştığı acı gerçek: Zayıf kreatif bütçeyi yutar, sinematik ve vurucu kreatif ise işletmeyi pazar lideri yapar.'
                 : 'In communities like r/entrepreneur and r/marketing, thousands of founders complain about the exact same trap: weak, generic creative eats your runway, while cinematic hook engineering creates market leaders.'}
@@ -398,13 +398,13 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                     {language === 'tr' ? item.titleTr : item.titleEn}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-sans font-medium">
+                  <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-sans font-bold">
                     {language === 'tr' ? item.descTr : item.descEn}
                   </p>
                 </div>
 
                 <div className="mt-6 pt-5 border-t border-gray-100 bg-gray-50/70 p-4 rounded-2xl">
-                  <p className="text-xs text-gray-700 italic font-medium leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-900 italic font-bold leading-relaxed">
                     {item.quote}
                   </p>
                 </div>
@@ -426,7 +426,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               ? 'Eski Ajans Modeli vs. PM Media Standardı'
               : 'Outdated Agency Model vs. The PM Media Standard'}
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base font-medium mt-3">
+          <p className="text-gray-800 text-base sm:text-lg font-bold mt-3">
             {language === 'tr'
               ? 'Hantal süreçler, amatör çekimler ve boş vaatler yerine; ölçülebilir görsel üstünlük.'
               : 'No bloated bureaucracy or empty vanity reports. Just high-converting visual dominance.'}
@@ -446,13 +446,13 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   <h3 className="text-base sm:text-lg font-black text-gray-900 font-sans">
                     {language === 'tr' ? 'Geleneksel Ajans / Amatör Yol' : 'Traditional Agency / DIY Approach'}
                   </h3>
-                  <p className="text-xs text-rose-600 font-bold">
+                  <p className="text-xs sm:text-sm text-rose-600 font-extrabold">
                     {language === 'tr' ? 'Bütçe yakar, dikkat çekmez' : 'Burns ad budget & ignores retention'}
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-6 pt-6 text-xs sm:text-sm font-medium text-gray-600">
+              <div className="space-y-6 pt-6 text-sm sm:text-base font-bold text-gray-700">
                 {[
                   {
                     label: language === 'tr' ? 'Kamera & Optik' : 'Camera & Optics',
@@ -476,10 +476,10 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   },
                 ].map((row, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <span className="text-rose-500 font-bold mt-0.5 text-base">✕</span>
+                    <span className="text-rose-500 font-black mt-0.5 text-lg">✕</span>
                     <div>
-                      <span className="font-bold text-gray-900 block text-xs uppercase tracking-wider">{row.label}:</span>
-                      <span className="text-gray-600 leading-relaxed">{row.val}</span>
+                      <span className="font-black text-gray-950 block text-xs sm:text-sm uppercase tracking-wider">{row.label}:</span>
+                      <span className="text-gray-700 leading-relaxed font-bold">{row.val}</span>
                     </div>
                   </div>
                 ))}
@@ -496,13 +496,13 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   <h3 className="text-base sm:text-lg font-black text-gray-900 font-sans">
                     {language === 'tr' ? 'PM Media Standardı (Doğru Yol)' : 'The PM Media Standard (Done Right)'}
                   </h3>
-                  <p className="text-xs text-emerald-600 font-bold">
+                  <p className="text-xs sm:text-sm text-emerald-600 font-extrabold">
                     {language === 'tr' ? 'Kaydırmayı durdurur, satış getirir' : 'Stops the thumb & unlocks high margins'}
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-6 pt-6 text-xs sm:text-sm font-medium text-gray-700">
+              <div className="space-y-6 pt-6 text-sm sm:text-base font-bold text-gray-900">
                 {[
                   {
                     label: language === 'tr' ? 'Kamera & Optik' : 'Camera & Optics',
@@ -528,8 +528,8 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   <div key={idx} className="flex items-start gap-3">
                     <CheckCircleBoldDuotoneIcon className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-gray-950 block text-xs uppercase tracking-wider">{row.label}:</span>
-                      <span className="text-gray-700 leading-relaxed font-semibold">{row.val}</span>
+                      <span className="font-black text-gray-950 block text-xs sm:text-sm uppercase tracking-wider">{row.label}:</span>
+                      <span className="text-gray-900 leading-relaxed font-bold">{row.val}</span>
                     </div>
                   </div>
                 ))}
@@ -552,7 +552,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                 ? 'PM Media Neden Çalışır? 4 Temel Sütun.'
                 : 'Why PM Media Works: 4 Non-Negotiable Pillars.'}
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base font-medium mt-3 leading-relaxed">
+            <p className="text-gray-800 text-base sm:text-lg font-bold mt-3 leading-relaxed">
               {language === 'tr'
                 ? 'Görsel sanatı doğrudan satış psikolojisiyle birleştiren üretim disiplinimiz.'
                 : 'Bridging pure cinematic art with direct-response consumer psychology.'}
@@ -630,14 +630,14 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                       {language === 'tr' ? pillar.titleTr : pillar.titleEn}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-sans font-medium">
+                    <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-sans font-bold">
                       {language === 'tr' ? pillar.descTr : pillar.descEn}
                     </p>
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2">
                     <CheckCircleBoldDuotoneIcon className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span className="text-xs font-bold text-gray-900 font-sans">
+                    <span className="text-xs sm:text-sm font-black text-gray-950 font-sans">
                       {language === 'tr' ? pillar.highlightTr : pillar.highlightEn}
                     </span>
                   </div>
@@ -660,7 +660,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               ? 'Sektörünüz İçin Doğru Pazarlama Etkisi'
               : 'Calculate Marketing Impact for Your Business'}
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base font-medium mt-3">
+          <p className="text-gray-800 text-base sm:text-lg font-bold mt-3">
             {language === 'tr'
               ? 'İşletme modelinizi seçin; profesyonel sinematik prodüksiyonun metriklerinize yapacağı etkiyi görün.'
               : 'Select your business vertical to see how cinema-grade creative engineering scales your numbers.'}
@@ -675,10 +675,10 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               <button
                 key={sector.id}
                 onClick={() => setActiveSector(sector.id)}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer font-sans ${
+                className={`px-5 sm:px-7 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-extrabold transition-all duration-200 cursor-pointer font-sans ${
                   isSelected
                     ? 'bg-gray-950 text-white shadow-lg scale-105'
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-800'
                 }`}
               >
                 {language === 'tr' ? sector.nameTr : sector.nameEn}
@@ -701,28 +701,28 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               {/* Left Column: Details & Deliverables */}
               <div className="lg:col-span-7 space-y-6">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-brand-blue font-mono">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-widest text-brand-blue font-mono">
                     {language === 'tr' ? 'ÖNERİLEN KREATİF DİSİPLİN' : 'RECOMMENDED CREATIVE DISCIPLINE'}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black text-gray-950 font-sans mt-1">
                     {language === 'tr' ? selectedSector.nameTr : selectedSector.nameEn}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                  <p className="text-sm sm:text-base text-gray-700 font-bold mt-1">
                     {language === 'tr' ? selectedSector.taglineTr : selectedSector.taglineEn}
                   </p>
                 </div>
 
-                <div className="p-4 sm:p-5 rounded-2xl bg-gray-50 border border-gray-100 text-xs sm:text-sm text-gray-700 font-medium leading-relaxed">
+                <div className="p-5 sm:p-6 rounded-2xl bg-gray-50 border border-gray-100 text-sm sm:text-base text-gray-900 font-bold leading-relaxed">
                   {language === 'tr' ? selectedSector.recommendationTr : selectedSector.recommendationEn}
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-900 mb-3 font-sans">
+                  <h4 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-950 mb-3 font-sans">
                     {language === 'tr' ? 'ANAHTAR TESLİM PAKET İÇERİĞİ:' : 'TURNKEY DELIVERABLES SUITE:'}
                   </h4>
                   <ul className="space-y-2.5">
                     {(language === 'tr' ? selectedSector.deliverablesTr : selectedSector.deliverablesEn).map((del, dIdx) => (
-                      <li key={dIdx} className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-gray-800">
+                      <li key={dIdx} className="flex items-center gap-2.5 text-sm sm:text-base font-bold text-gray-900">
                         <CheckCircleBoldDuotoneIcon className="w-4 h-4 text-emerald-500 shrink-0" />
                         <span>{del}</span>
                       </li>
@@ -731,7 +731,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                 </div>
 
                 <div className="pt-2">
-                  <p className="text-xs text-gray-500 italic font-medium">
+                  <p className="text-xs sm:text-sm text-gray-600 italic font-bold">
                     {selectedSector.quote}
                   </p>
                 </div>
@@ -740,8 +740,8 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               {/* Right Column: Key Metric Multipliers */}
               <div className="lg:col-span-5 bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
-                    <BoltBoldDuotoneIcon className="w-3.5 h-3.5" />
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
+                    <BoltBoldDuotoneIcon className="w-4 h-4" />
                     <span>{language === 'tr' ? 'BEKLENEN BÜYÜME ÇARPANI' : 'EXPECTED GROWTH MULTIPLIER'}</span>
                   </div>
                   <h4 className="text-xl sm:text-2xl font-black font-sans">
@@ -752,10 +752,10 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                 <div className="space-y-4">
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] text-gray-400 font-medium block">
+                      <span className="text-xs sm:text-sm text-gray-300 font-bold block">
                         {language === 'tr' ? 'Organik Erişim Artışı' : 'Organic Reach Lift'}
                       </span>
-                      <span className="text-xs text-gray-300 font-bold">{language === 'tr' ? 'Keşfet & Akış İlerlemesi' : 'Explore & Feed Velocity'}</span>
+                      <span className="text-xs sm:text-sm text-gray-200 font-black">{language === 'tr' ? 'Keşfet & Akış İlerlemesi' : 'Explore & Feed Velocity'}</span>
                     </div>
                     <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-sans">
                       {selectedSector.reachMultiplier}
@@ -764,10 +764,10 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
 
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] text-gray-400 font-medium block">
+                      <span className="text-xs sm:text-sm text-gray-300 font-bold block">
                         {language === 'tr' ? 'Satın Alma Dönüşümü' : 'Conversion Intent'}
                       </span>
-                      <span className="text-xs text-gray-300 font-bold">{language === 'tr' ? 'Sepete Ekleme Oranı' : 'Checkout & Add to Cart'}</span>
+                      <span className="text-xs sm:text-sm text-gray-200 font-black">{language === 'tr' ? 'Sepete Ekleme Oranı' : 'Checkout & Add to Cart'}</span>
                     </div>
                     <span className="text-2xl sm:text-3xl font-black text-brand-pink font-sans">
                       {selectedSector.conversionLift}
@@ -776,10 +776,10 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
 
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] text-gray-400 font-medium block">
+                      <span className="text-xs sm:text-sm text-gray-300 font-bold block">
                         {language === 'tr' ? 'Ortalama Sepet Tutarı (AOV)' : 'Average Order Value Lift'}
                       </span>
-                      <span className="text-xs text-gray-300 font-bold">{language === 'tr' ? 'Algılanan Değer Artışı' : 'Perceived Value Gain'}</span>
+                      <span className="text-xs sm:text-sm text-gray-200 font-black">{language === 'tr' ? 'Algılanan Değer Artışı' : 'Perceived Value Gain'}</span>
                     </div>
                     <span className="text-2xl sm:text-3xl font-black text-brand-blue font-sans">
                       {selectedSector.aovLift}
@@ -789,7 +789,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
 
                 <button
                   onClick={onOpenContact}
-                  className="w-full py-3.5 rounded-full bg-white text-gray-950 font-bold text-xs sm:text-sm hover:bg-gray-100 hover:scale-102 active:scale-98 transition-all duration-200 shadow-xl flex items-center justify-center gap-2 cursor-pointer font-sans"
+                  className="w-full py-3.5 rounded-full bg-white text-gray-950 font-black text-xs sm:text-sm hover:bg-gray-100 hover:scale-102 active:scale-98 transition-all duration-200 shadow-xl flex items-center justify-center gap-2 cursor-pointer font-sans"
                 >
                   <span>{language === 'tr' ? 'Bu Stratejiyi Markanıza Uygulayın' : 'Deploy This Strategy For Your Brand'}</span>
                   <ArrowRightUpBoldIcon className="w-4 h-4 text-gray-950" />
@@ -813,7 +813,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                 ? 'Kamera Karşısında Büyüyen Markalar'
                 : 'Brands Scaled With PM Media Creative'}
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base font-medium mt-3">
+            <p className="text-gray-800 text-base sm:text-lg font-bold mt-3">
               {language === 'tr'
                 ? 'Gerçek stüdyo çekimleri, milyonlara ulaşan dikey formatlar ve somut ticari başarı.'
                 : 'Real studio drops, viral vertical velocity, and compounding brand equity.'}
@@ -830,36 +830,36 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute top-4 left-4 bg-brand-pink text-white text-[11px] font-black uppercase px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-brand-pink text-white text-[11px] sm:text-xs font-black uppercase px-3 py-1 rounded-full">
                   FASHION & FOOTWEAR
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h4 className="text-xl sm:text-2xl font-black font-sans">Still Shoes & Bags</h4>
-                  <p className="text-xs text-gray-300 font-medium">Trabzon Fashion Drop & Streetwear Campaigns</p>
+                  <p className="text-xs sm:text-sm text-gray-200 font-bold">Trabzon Fashion Drop & Streetwear Campaigns</p>
                 </div>
               </div>
 
               <div className="p-6 sm:p-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 font-bold text-xs border border-emerald-200">
+                  <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 font-bold text-xs sm:text-sm border border-emerald-200">
                     {language === 'tr' ? '12+ Dikey Reels Lansmanı' : '12+ Vertical Reel Drops'}
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-blue-50 text-brand-blue font-bold text-xs border border-blue-200">
+                  <span className="px-3 py-1 rounded-full bg-blue-50 text-brand-blue font-bold text-xs sm:text-sm border border-blue-200">
                     {language === 'tr' ? 'Viral Sokak Modası' : 'Viral Streetwear Reach'}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-800 font-bold leading-relaxed">
                   {language === 'tr'
                     ? 'Kalıp taban sneaker, kristal taşlı stiletto ve katlamalı deri çizmeler için hazırladığımız dinamik sokak modası kurguları; sıradan bir ayakkabı markasını sosyal medyada arzulanan bir moda ikonuna dönüştürdü.'
                     : 'From chunky streetwear sneakers to jeweled stilettos, our kinetic pacing and editorial lookbooks positioned Still Shoes as an aspirational fashion authority on Instagram & TikTok.'}
                 </p>
 
                 <div className="pt-2 flex items-center justify-between border-t border-gray-100">
-                  <span className="text-xs font-bold text-gray-500 font-sans">Trabzon, Fashion District</span>
+                  <span className="text-xs sm:text-sm font-bold text-gray-600 font-sans">Trabzon, Fashion District</span>
                   <button
                     onClick={handleWorksClick}
-                    className="text-xs font-bold text-brand-blue hover:text-brand-pink flex items-center gap-1 transition-colors cursor-pointer"
+                    className="text-xs sm:text-sm font-bold text-brand-blue hover:text-brand-pink flex items-center gap-1 transition-colors cursor-pointer"
                   >
                     <span>{language === 'tr' ? 'Kampanyayı Gör' : 'View Campaign'}</span>
                     <ArrowRightUpBoldIcon className="w-3.5 h-3.5" />
@@ -877,36 +877,36 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute top-4 left-4 bg-amber-500 text-white text-[11px] font-black uppercase px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-amber-500 text-white text-[11px] sm:text-xs font-black uppercase px-3 py-1 rounded-full">
                   HAUTE JOAILLERIE
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h4 className="text-xl sm:text-2xl font-black font-sans">Akdin Gold</h4>
-                  <p className="text-xs text-gray-300 font-medium">Trabzon Hasırı Craftsmanship & Macro Film Series</p>
+                  <p className="text-xs sm:text-sm text-gray-200 font-bold">Trabzon Hasırı Craftsmanship & Macro Film Series</p>
                 </div>
               </div>
 
               <div className="p-6 sm:p-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-600 font-bold text-xs border border-amber-200">
+                  <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-600 font-bold text-xs sm:text-sm border border-amber-200">
                     {language === 'tr' ? '1:1 Makro Zanaat Filmleri' : '1:1 Macro Craft Films'}
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 font-bold text-xs border border-emerald-200">
+                  <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 font-bold text-xs sm:text-sm border border-emerald-200">
                     {language === 'tr' ? 'Lüks İtibar Çarpanı' : 'Haute Prestige Scaling'}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-800 font-bold leading-relaxed">
                   {language === 'tr'
                     ? 'Trabzon’un asırlık altın hasır örgü geleneğini 100mm makro optikler ve kontrollü stüdyo ışığıyla kaydettik. Telkârinin her mikronunu gösteren çekimler, markayı ulusal ve küresel pazarda lüks mücevher sınıfına taşıdı.'
                     : 'Documenting centuries-old Trabzon Hasırı gold mesh weaving with 100mm macro lenses and precision specular control. The resulting films established Akdin Gold as an indisputable tier-1 luxury jeweler.'}
                 </p>
 
                 <div className="pt-2 flex items-center justify-between border-t border-gray-100">
-                  <span className="text-xs font-bold text-gray-500 font-sans">Trabzon, Akdin Atelier</span>
+                  <span className="text-xs sm:text-sm font-bold text-gray-600 font-sans">Trabzon, Akdin Atelier</span>
                   <button
                     onClick={handleWorksClick}
-                    className="text-xs font-bold text-brand-blue hover:text-brand-pink flex items-center gap-1 transition-colors cursor-pointer"
+                    className="text-xs sm:text-sm font-bold text-brand-blue hover:text-brand-pink flex items-center gap-1 transition-colors cursor-pointer"
                   >
                     <span>{language === 'tr' ? 'Mücevher Serisini Gör' : 'View Jewelry Suite'}</span>
                     <ArrowRightUpBoldIcon className="w-3.5 h-3.5" />
@@ -930,7 +930,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               ? 'İşletme Sahiplerinin Merak Ettikleri'
               : 'Direct Answers for Business Owners'}
           </h2>
-          <p className="text-gray-600 text-xs sm:text-sm font-medium mt-2">
+          <p className="text-gray-800 text-sm sm:text-base font-bold mt-2">
             {language === 'tr'
               ? 'Video pazarlaması, bütçe ve yatırım geri dönüşü (ROI) hakkında dürüst yanıtlar.'
               : 'No agency jargon. Honest answers on creative production, pricing, and ROI.'}
@@ -949,10 +949,10 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                   onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-gray-50/50 transition-colors"
                 >
-                  <span className="text-sm sm:text-base font-bold text-gray-950 font-sans">
+                  <span className="text-base sm:text-lg font-black text-gray-950 font-sans">
                     {language === 'tr' ? faq.qTr : faq.qEn}
                   </span>
-                  <span className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center shrink-0 font-bold text-gray-600 text-sm">
+                  <span className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center shrink-0 font-bold text-gray-700 text-base">
                     {isOpen ? '−' : '+'}
                   </span>
                 </button>
@@ -966,7 +966,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-1 text-xs sm:text-sm text-gray-600 font-medium leading-relaxed border-t border-gray-100">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-2 text-sm sm:text-base text-gray-800 font-bold leading-relaxed border-t border-gray-100">
                         {language === 'tr' ? faq.aTr : faq.aEn}
                       </div>
                     </motion.div>
@@ -986,7 +986,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
           <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-brand-pink/30 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs sm:text-sm font-bold uppercase tracking-widest backdrop-blur-md">
               <BoltBoldDuotoneIcon className="w-3.5 h-3.5 text-brand-pink" />
               <span>{language === 'tr' ? 'BÜYÜMEK İÇİN İLK ADIMI ATIN' : 'MAKE THE SHIFT TODAY'}</span>
             </div>
@@ -1005,7 +1005,7 @@ export const MarketingPage: React.FC<MarketingPageProps> = ({
               )}
             </h2>
 
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto font-sans">
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 font-bold leading-relaxed max-w-2xl mx-auto font-sans">
               {language === 'tr'
                 ? 'Sıkıcı videolara veda edin. Markanızı hak ettiği sinematik zirveye taşıyalım. Fikrinizi bizimle paylaşın, hemen bir strateji oluşturalım.'
                 : 'Say goodbye to boring videos and wasted ad spend. Let’s craft a visual identity that commands market attention and converts viewers into loyal customers.'}

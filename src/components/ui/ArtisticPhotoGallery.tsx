@@ -491,7 +491,7 @@ export const ArtisticPhotoGallery: React.FC = () => {
                     <span>{language === 'tr' ? activePhoto.locationTr : activePhoto.locationEn}</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-sans font-medium">
+                  <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-sans font-bold">
                     {language === 'tr' ? activePhoto.subjectDetailTr : activePhoto.subjectDetailEn}
                   </p>
                 </div>
