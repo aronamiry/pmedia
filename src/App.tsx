@@ -14,6 +14,7 @@ import { HomePage } from './pages/HomePage';
 // Lazy load secondary pages
 const WorksPage = lazy(() => import('./pages/WorksPage').then(module => ({ default: module.WorksPage })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+const MarketingPage = lazy(() => import('./pages/MarketingPage').then(module => ({ default: module.MarketingPage })));
 
 const lenisOptions = {
   lerp: 0.08,
@@ -92,7 +93,7 @@ const AppContent: React.FC = () => {
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash === 'works' || hash === 'home') {
+      if (hash === 'works' || hash === 'home' || hash === 'marketing') {
         setCurrentPage(hash as PageRoute);
       } else if (hash.startsWith('services')) {
         setCurrentPage('services');
@@ -151,6 +152,16 @@ const AppContent: React.FC = () => {
               <PageWrapper id="services">
                 <Suspense fallback={<div className="min-h-screen" />}>
                   <ServicesPage onOpenContact={() => setIsContactOpen(true)} />
+                </Suspense>
+              </PageWrapper>
+            )}
+            {currentPage === 'marketing' && (
+              <PageWrapper id="marketing">
+                <Suspense fallback={<div className="min-h-screen" />}>
+                  <MarketingPage
+                    onOpenContact={() => setIsContactOpen(true)}
+                    setCurrentPage={handleNavigate}
+                  />
                 </Suspense>
               </PageWrapper>
             )}

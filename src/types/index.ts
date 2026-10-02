@@ -1,6 +1,6 @@
 export type Language = 'tr' | 'en';
 
-export type PageRoute = 'home' | 'works' | 'services';
+export type PageRoute = 'home' | 'works' | 'services' | 'marketing';
 
 export type ProjectCategory = 
   | 'all'

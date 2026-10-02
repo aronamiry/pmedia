@@ -101,6 +101,11 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                     {t.nav.services}
                   </button>
                 </li>
+                <li>
+                  <button onClick={() => handleNav('marketing')} className="text-sm font-bold text-gray-600 hover:text-gray-900">
+                    {t.nav.marketing}
+                  </button>
+                </li>
               </ul>
             </div>
 

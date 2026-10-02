@@ -19,6 +19,7 @@ import {
   PlayBoldDuotoneIcon,
   LightbulbBoldDuotoneIcon,
   HeartBoldDuotoneIcon,
+  BoltBoldDuotoneIcon,
 } from '@solar-icons/react';
 import { HeroRemotionBackground } from '../components/remotion/HeroRemotionBackground';
 
@@ -778,6 +779,34 @@ export const HomePage: React.FC<HomePageProps> = ({
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 4.5 MARKETING IMPACT TEASER */}
+      <section className="py-10 px-4 sm:px-6 bg-white overflow-hidden">
+        <div className="max-w-6xl mx-auto rounded-3xl bg-gradient-to-r from-gray-950 via-gray-900 to-black text-white p-7 sm:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="absolute top-0 right-0 w-72 h-72 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="space-y-2.5 max-w-2xl relative z-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-wider">
+              <BoltBoldDuotoneIcon className="w-3.5 h-3.5" />
+              <span>{language === 'tr' ? 'BÜYÜME VE PAZARLAMA BİLİMİ' : 'GROWTH & MARKETING SCIENCE'}</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black font-sans tracking-tight">
+              {language === 'tr' ? 'Pazarlamada Bütçe Kaybetmeyi Bırakın.' : 'Stop Burning Cash on Invisible Ads.'}
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-400 font-medium leading-relaxed font-sans">
+              {language === 'tr'
+                ? 'İşletmelerin %90’ı zayıf kreatif yüzünden bütçesini yakar. 2026’da dikkat kancalarını ve sinematik prestiji nasıl doğru uyguladığımızı keşfedin.'
+                : '90% of businesses burn cash because of weak creative. Discover how we engineer thumb-stopping hooks and luxury visual prestige that converts.'}
+            </p>
+          </div>
+          <button
+            onClick={() => setCurrentPage('marketing')}
+            className="w-full md:w-auto px-7 py-3.5 rounded-full bg-white text-gray-950 hover:bg-gray-100 font-bold text-xs sm:text-sm shrink-0 flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95 cursor-pointer shadow-lg font-sans relative z-10"
+          >
+            <span>{language === 'tr' ? 'Pazarlama Etkisini İnceleyin' : 'Explore Marketing Impact'}</span>
+            <ArrowRightUpBoldIcon className="w-4 h-4 text-gray-950" />
+          </button>
         </div>
       </section>
 

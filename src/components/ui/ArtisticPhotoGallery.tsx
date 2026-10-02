@@ -94,8 +94,8 @@ const photoItems: PhotoItem[] = [
     titleEn: 'Still Shoes Rhinestone Sparkle Boots & Fur',
     titleTr: 'Still Shoes Işıltılı Taşlı Bot & Kürk',
     category: 'fashion',
-    categoryLabelEn: 'Lookbook Stills',
-    categoryLabelTr: 'Lookbook Çekimi',
+    categoryLabelEn: 'Lookbook Edition',
+    categoryLabelTr: 'Lookbook Serisi',
     imageSrc: '/media/photography/still-shoes-rhinestone-boots-fur-lookbook.jpg',
     aspect: 'aspect-[3/4]',
     lensSpec: '50mm Art Lens • f/1.4',
@@ -112,7 +112,7 @@ const photoItems: PhotoItem[] = [
     titleEn: 'Still Shoes Chunky Urban Sneaker Drop',
     titleTr: 'Still Shoes Kalıp Taban Sokak Modası Sneaker',
     category: 'fashion',
-    categoryLabelEn: 'Streetwear Stills',
+    categoryLabelEn: 'Streetwear Edition',
     categoryLabelTr: 'Sokak Modası',
     imageSrc: '/media/photography/still-shoes-chunky-sneakers-urban-style.jpg',
     aspect: 'aspect-[3/4]',
@@ -189,7 +189,7 @@ export const ArtisticPhotoGallery: React.FC = () => {
   const [savedPhotos, setSavedPhotos] = useState<Record<string, boolean>>({});
 
   const filterOptions = [
-    { key: 'all', labelEn: `All Stills (${photoItems.length})`, labelTr: `Tüm Fotoğraflar (${photoItems.length})` },
+    { key: 'all', labelEn: `All Photography (${photoItems.length})`, labelTr: `Tüm Fotoğraflar (${photoItems.length})` },
     { key: 'jewelry', labelEn: 'Akdin Gold Haute Jewelry', labelTr: 'Akdin Gold Mücevher' },
     { key: 'fashion', labelEn: 'Still Shoes & Fashion', labelTr: 'Still Shoes Moda & Bot' },
     { key: 'macro', labelEn: 'Macro & Craft Details', labelTr: 'Zanaat & Makro Detay' },
@@ -221,14 +221,14 @@ export const ArtisticPhotoGallery: React.FC = () => {
             {language === 'tr' ? (
               <>Editoryal Fotoğrafçılık & <span className="text-gradient">Moda Serisi</span></>
             ) : (
-              <>Editorial Stills & <span className="text-gradient">Fashion Series</span></>
+              <>Editorial Photography & <span className="text-gradient">Fashion Series</span></>
             )}
           </h2>
 
           <p className="text-gray-600 text-xs sm:text-base leading-relaxed">
             {language === 'tr' 
               ? `Akdin Gold yüksek mücevher portrelerinden Still Shoes sokak modası ve lüks lookbook serilerine uzanan ${photoItems.length} parçalık orijinal stüdyo ve editoryal fotoğraf arşivi.`
-              : `From Akdin Gold haute joaillerie portraits to Still Shoes contemporary lookbooks and macro jewelry crafts. An authentic ${photoItems.length}-frame client editorial stills archive.`}
+              : `From Akdin Gold haute joaillerie portraits to Still Shoes contemporary lookbooks and macro jewelry crafts. An authentic ${photoItems.length}-frame client editorial photo archive.`}
           </p>
         </div>
 
@@ -384,11 +384,11 @@ export const ArtisticPhotoGallery: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Row 4: Authentic Still Badge + White Pill Button */}
+                  {/* Row 4: Client Production Badge + White Pill Button */}
                   <div className="pt-2 flex items-center justify-between gap-3 border-t border-white/10">
                     <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-emerald-400 font-sans">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                      <span>{language === 'tr' ? 'Orijinal Çekim' : 'Real Client Still'}</span>
+                      <span>{language === 'tr' ? 'Özel Prodüksiyon' : 'Client Production'}</span>
                     </div>
 
                     <button

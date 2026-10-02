@@ -72,7 +72,7 @@ const floatingItems: FloatingIconItem[] = [
     iconColor: '#10B981',
     borderColor: 'rgba(16, 185, 129, 0.45)',
     glowColor: 'rgba(16, 185, 129, 0.2)',
-    tag: { tr: 'HAM ÇEKİM', en: 'RAW STILL' },
+    tag: { tr: 'HAM ÇEKİM', en: 'CINEMA FRAME' },
     scale: 0.95,
     animClass: 'animate-float-1',
     hideOnMobile: false,

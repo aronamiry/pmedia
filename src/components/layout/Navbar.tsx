@@ -52,6 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'home', label: t.nav.home },
     { id: 'works', label: t.nav.works },
     { id: 'services', label: t.nav.services },
+    { id: 'marketing', label: t.nav.marketing },
   ];
 
   const handleNavClick = (page: PageRoute) => {
