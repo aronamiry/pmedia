@@ -14,28 +14,34 @@ interface FloatingIconItem {
   id: string;
   leftPercent: number;
   topPercent: number;
+  mobileLeftPercent: number;
+  mobileTopPercent: number;
   icon: React.ComponentType<{ size?: number; className?: string }>;
   iconColor: string;
   borderColor: string;
   glowColor: string;
   tag?: { tr: string; en: string };
   scale: number;
+  mobileScale: number;
   animClass: string;
   hideOnMobile?: boolean;
 }
 
-// 8 Minimalist, Bolder, Modern Floating Solar Icon Badges with Colored Borders & Bi-lingual Tags
+// Minimalist, Bolder, Modern Floating Solar Icon Badges with Clean Clear Center Corridor on Mobile
 const floatingItems: FloatingIconItem[] = [
   {
     id: 'cinema-cam',
     leftPercent: 10,
     topPercent: 82,
+    mobileLeftPercent: 8,
+    mobileTopPercent: 86,
     icon: VideocameraRecordBoldDuotoneIcon,
     iconColor: '#2563EB',
     borderColor: 'rgba(37, 99, 235, 0.45)',
     glowColor: 'rgba(37, 99, 235, 0.22)',
     tag: { tr: 'SİNEMA 4K', en: 'CINEMA 4K' },
     scale: 0.95,
+    mobileScale: 0.82,
     animClass: 'animate-float-1',
     hideOnMobile: false,
   },
@@ -43,11 +49,14 @@ const floatingItems: FloatingIconItem[] = [
     id: 'creative-stars',
     leftPercent: 16,
     topPercent: 12,
+    mobileLeftPercent: 8,
+    mobileTopPercent: 12,
     icon: StarsBoldDuotoneIcon,
     iconColor: '#F43F5E',
     borderColor: 'rgba(244, 63, 94, 0.45)',
     glowColor: 'rgba(244, 63, 94, 0.22)',
     scale: 1.05,
+    mobileScale: 0.88,
     animClass: 'animate-float-2',
     hideOnMobile: false,
   },
@@ -55,25 +64,31 @@ const floatingItems: FloatingIconItem[] = [
     id: 'energy-bolt',
     leftPercent: 7,
     topPercent: 44,
+    mobileLeftPercent: 4,
+    mobileTopPercent: 32,
     icon: BoltBoldDuotoneIcon,
     iconColor: '#F59E0B',
     borderColor: 'rgba(245, 158, 11, 0.5)',
     glowColor: 'rgba(245, 158, 11, 0.22)',
     tag: { tr: 'VİRAL HIZ', en: 'VIRAL SPEED' },
     scale: 0.92,
+    mobileScale: 0.78,
     animClass: 'animate-float-3',
-    hideOnMobile: false,
+    hideOnMobile: true, // Clean mobile corridor: hide energy bolt badge to prevent clipping
   },
   {
     id: 'photo-lens',
     leftPercent: 14,
     topPercent: 66,
+    mobileLeftPercent: 6,
+    mobileTopPercent: 78,
     icon: CameraMinimalisticBoldDuotoneIcon,
     iconColor: '#10B981',
     borderColor: 'rgba(16, 185, 129, 0.45)',
     glowColor: 'rgba(16, 185, 129, 0.2)',
     tag: { tr: 'HAM ÇEKİM', en: 'CINEMA FRAME' },
     scale: 0.95,
+    mobileScale: 0.8,
     animClass: 'animate-float-1',
     hideOnMobile: false,
   },
@@ -81,11 +96,14 @@ const floatingItems: FloatingIconItem[] = [
     id: 'studio-heart',
     leftPercent: 84,
     topPercent: 14,
+    mobileLeftPercent: 90,
+    mobileTopPercent: 13,
     icon: HeartBoldDuotoneIcon,
     iconColor: '#FF3366',
     borderColor: 'rgba(255, 51, 102, 0.45)',
     glowColor: 'rgba(255, 51, 102, 0.24)',
     scale: 1.08,
+    mobileScale: 0.88,
     animClass: 'animate-float-2',
     hideOnMobile: false,
   },
@@ -93,12 +111,15 @@ const floatingItems: FloatingIconItem[] = [
     id: 'clapper-edit',
     leftPercent: 84,
     topPercent: 82,
+    mobileLeftPercent: 92,
+    mobileTopPercent: 86,
     icon: ClapperboardPlayBoldDuotoneIcon,
     iconColor: '#8B5CF6',
     borderColor: 'rgba(139, 92, 246, 0.45)',
     glowColor: 'rgba(139, 92, 246, 0.22)',
     tag: { tr: 'KURGU & RENK', en: 'POST & EDIT' },
     scale: 0.95,
+    mobileScale: 0.82,
     animClass: 'animate-float-3',
     hideOnMobile: false,
   },
@@ -106,24 +127,30 @@ const floatingItems: FloatingIconItem[] = [
     id: 'play-reel',
     leftPercent: 88,
     topPercent: 44,
+    mobileLeftPercent: 96,
+    mobileTopPercent: 35,
     icon: PlayBoldDuotoneIcon,
     iconColor: '#0284C7',
     borderColor: 'rgba(2, 132, 199, 0.45)',
     glowColor: 'rgba(2, 132, 199, 0.22)',
     tag: { tr: 'PRORES REELS', en: 'PRORES REEL' },
     scale: 0.95,
+    mobileScale: 0.8,
     animClass: 'animate-float-1',
-    hideOnMobile: false,
+    hideOnMobile: true, // Clean mobile corridor: hide play reel badge on phones so headline & subheadline never clash
   },
   {
     id: 'layers-mesh',
     leftPercent: 82,
     topPercent: 64,
+    mobileLeftPercent: 92,
+    mobileTopPercent: 76,
     icon: LayersMinimalisticBoldDuotoneIcon,
     iconColor: '#06B6D4',
     borderColor: 'rgba(6, 182, 212, 0.45)',
     glowColor: 'rgba(6, 182, 212, 0.2)',
     scale: 1.0,
+    mobileScale: 0.82,
     animClass: 'animate-float-2',
     hideOnMobile: false,
   },
@@ -184,12 +211,24 @@ export const HeroRemotionBackground: React.FC<HeroRemotionBackgroundProps> = ({ 
                 item.hideOnMobile ? 'hidden md:block' : 'block'
               }`}
               style={{
-                left: `${item.leftPercent}%`,
-                top: `${item.topPercent}%`,
-                transform: `scale(${item.scale})`,
+                left: `var(--fl-left, ${item.leftPercent}%)`,
+                top: `var(--fl-top, ${item.topPercent}%)`,
+                transform: `scale(var(--fl-scale, ${item.scale}))`,
                 willChange: 'transform',
+                ['--fl-left' as string]: `${item.mobileLeftPercent}%`,
+                ['--fl-top' as string]: `${item.mobileTopPercent}%`,
+                ['--fl-scale' as string]: `${item.mobileScale}`,
               }}
             >
+              <style>{`
+                @media (min-width: 768px) {
+                  div[style*="--fl-left: ${item.mobileLeftPercent}%"] {
+                    --fl-left: ${item.leftPercent}% !important;
+                    --fl-top: ${item.topPercent}% !important;
+                    --fl-scale: ${item.scale} !important;
+                  }
+                }
+              `}</style>
               <div
                 className={`inline-flex items-center rounded-full bg-white/95 backdrop-blur-xl transition-transform hover:scale-105 ${
                   labelText ? 'px-2.5 py-1.5 sm:px-4 sm:py-2 gap-1.5 sm:gap-2.5' : 'p-2 sm:p-3'

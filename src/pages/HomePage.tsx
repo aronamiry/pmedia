@@ -199,7 +199,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               style={{ y: floatImg1Y }}
-              className="block absolute -top-12 -right-3 xs:-top-14 xs:-right-6 sm:-top-16 sm:-right-32 md:-right-56 w-16 xs:w-24 sm:w-40 md:w-52 aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(37,99,235,0.35)] rotate-6 animate-float border-[3px] sm:border-[5px] border-blue-400/90 ring-2 ring-blue-500/30 -z-10 bg-gray-100 pointer-events-none select-none"
+              className="block absolute -top-16 -right-2 xs:-top-20 xs:-right-4 sm:-top-16 sm:-right-32 md:-right-56 w-14 xs:w-18 sm:w-40 md:w-52 aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(37,99,235,0.35)] rotate-6 animate-float border-[2.5px] sm:border-[5px] border-blue-400/90 ring-2 ring-blue-500/30 -z-10 bg-gray-100 pointer-events-none select-none opacity-80 sm:opacity-100"
             >
               <img 
                 fetchPriority="high" 
@@ -216,7 +216,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               style={{ y: floatImg2Y }}
-              className="block absolute -bottom-10 -left-3 xs:-bottom-14 xs:-left-6 sm:-bottom-16 sm:-left-32 md:-left-56 w-14 xs:w-20 sm:w-36 md:w-48 aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(244,63,94,0.35)] -rotate-12 animate-float border-[3px] sm:border-[5px] border-rose-400/90 ring-2 ring-rose-500/30 -z-10 bg-gray-100 [animation-delay:1.5s] pointer-events-none select-none"
+              className="block absolute -bottom-16 -left-3 xs:-bottom-20 xs:-left-5 sm:-bottom-16 sm:-left-32 md:-left-56 w-12 xs:w-16 sm:w-36 md:w-48 aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_35px_-8px_rgba(244,63,94,0.35)] -rotate-12 animate-float border-[2.5px] sm:border-[5px] border-rose-400/90 ring-2 ring-rose-500/30 -z-10 bg-gray-100 [animation-delay:1.5s] pointer-events-none select-none opacity-75 sm:opacity-100"
             >
               <img 
                 fetchPriority="high" 
@@ -237,7 +237,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg sm:text-2xl md:text-3xl text-gray-800 font-bold max-w-3xl mx-auto leading-relaxed font-sans"
+            className="text-base xs:text-lg sm:text-2xl md:text-3xl text-gray-900 font-bold max-w-2xl sm:max-w-3xl mx-auto leading-relaxed font-sans px-4 sm:px-0 py-2 rounded-2xl bg-white/40 sm:bg-transparent backdrop-blur-[2px] sm:backdrop-blur-none"
           >
             {t.hero.subheadline}
           </motion.p>
