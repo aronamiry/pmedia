@@ -681,4 +681,115 @@ export const projectsData: Project[] = [
     },
     featured: false,
   },
+
+  // 19. PRADA & KUTLU OPTİK - EDITORIAL EYEWEAR LOOKBOOK
+  {
+    id: 'prada-kutlu-optik-editorial-lookbook',
+    title: {
+      tr: 'Prada & Kutlu Optik — Lüks Gözlük Editoryali',
+      en: 'Prada & Kutlu Optik — Luxury Eyewear Lookbook',
+    },
+    client: 'Kutlu Optik',
+    category: 'photography',
+    categoryLabel: {
+      tr: 'Fotoğraf Çekimi',
+      en: 'Photography',
+    },
+    productionType: {
+      tr: 'Lüks Moda & Ayna Yansımalı Portreler',
+      en: 'High-Fashion Eyewear & Mirror Stills',
+    },
+    description: {
+      tr: 'Prada beyaz asetat güneş gözlüğü, altın menteşe logoları ve butik içi prizmatik ayna kompozisyonlarını içeren yüksek kontrastlı moda çekimi.',
+      en: 'Editorial studio and boutique stills capturing Prada white acetate sunglasses, golden hardware, and refined split-mirror reflections.',
+    },
+    year: '2025',
+    thumbnail: '/media/photography/prada-luxury-eyewear-editorial-close-up.png',
+    aspectRatio: '9:16',
+    deliverables: {
+      tr: ['Master Editoryal Moda Kareleri', 'Lüks Butik Vitrin Formatları', 'Sosyal Medya Reklam Görselleri'],
+      en: ['Master Editorial Fashion Frames', 'Luxury In-Store Display Masters', 'High-Res Social Ad Creatives'],
+    },
+    specs: {
+      camera: 'Sony Alpha 7R V + 85mm f/1.4 GM',
+      grading: 'Vogue Clean High-Key Commercial Grade',
+      audio: 'N/A — Stills Production',
+      aspect: '9:16 Vertical UHD',
+    },
+    featured: true,
+  },
+
+  // 20. AKDİN GOLD - SÜMELA MANASTIRI & GELENEKSEL TRABZON HASIRI
+  {
+    id: 'akdingold-sumela-hasir-heritage',
+    title: {
+      tr: 'Akdin Gold — Sümela Manastırı Trabzon Hasırı Mirası',
+      en: 'Akdin Gold — Sümela Monastery Heritage Campaign',
+    },
+    client: 'Akdin Gold',
+    category: 'photography',
+    categoryLabel: {
+      tr: 'Miras & Mücevher',
+      en: 'Heritage & Jewelry',
+    },
+    productionType: {
+      tr: 'Tarihi Dış Mekan & Asırlık Altın Zanaati',
+      en: 'Historic On-Location & Gold Craftsmanship',
+    },
+    description: {
+      tr: 'Asırlık Sümela Manastırı freskleri eşliğinde el örgüsü Trabzon hasırı gerdanlık, kelepçe ve yüzüklerin kültürel zarafetini buluşturan ikonik kampanya.',
+      en: 'A cultural luxury campaign set against the historic stone frescoes of Sümela Monastery, honoring centuries of Trabzon hasırı gold weaving.',
+    },
+    year: '2025',
+    thumbnail: '/media/photography/akdingold-sumela-monastery-hasir-set.png',
+    aspectRatio: '9:16',
+    deliverables: {
+      tr: ['Kültürel Miras Katalog Çekimleri', 'Dış Mekan Doğal Işık Masterları', 'Uluslararası Basın Arşiv Görselleri'],
+      en: ['Cultural Heritage Lookbook Frames', 'Natural Mountain Light Masters', 'International Press Assets'],
+    },
+    specs: {
+      camera: 'Sony Alpha 7R V + 35mm GM Prime',
+      grading: 'Heritage Golden Hour Film Profile',
+      audio: 'N/A — Stills Production',
+      aspect: '9:16 Vertical UHD',
+    },
+    featured: true,
+  },
+
+  // 21. HAUTE BEAUTY & NAIL ART MACRO
+  {
+    id: 'haute-beauty-nail-art-diamond-macro',
+    title: {
+      tr: 'Haute Beauty — Kusursuz Manikür & Pırlanta Yüzük Makrosu',
+      en: 'Haute Beauty — Pristine Manicure & Fine Diamond Stills',
+    },
+    client: 'PM Media Beauty Lab',
+    category: 'photography',
+    categoryLabel: {
+      tr: 'Makro & Güzellik',
+      en: 'Macro & Beauty',
+    },
+    productionType: {
+      tr: 'Ultra Yakın Çekim Makro & Mücevher Detayı',
+      en: 'Ultra-Close Macro & Fine Jewelry Stills',
+    },
+    description: {
+      tr: 'Temiz ombre tırnak tasarımı, pırlanta taşlı yüzükler ve lüks çelik bileklik kombinasyonunu mikron seviyesinde sergileyen stüdyo makro çekimi.',
+      en: 'Precision macro beauty photography highlighting delicate ombre nail artistry, pavé diamond bands, and polished luxury wrist accessories.',
+    },
+    year: '2025',
+    thumbnail: '/media/photography/nail-art-silver-rings-macro.png',
+    aspectRatio: '9:16',
+    deliverables: {
+      tr: ['Ultra Yüksek Çözünürlüklü Makro Kareler', 'Güzellik Merkezi Lookbook Formatı', 'Cilt & Mücevher Rötuş Masterı'],
+      en: ['Ultra-Resolution Macro Stills', 'Salon Lookbook Display Masters', 'High-End Retouch Skin & Jewelry Grades'],
+    },
+    specs: {
+      camera: 'Sony FX3 + 90mm Macro 1:1 G Master',
+      grading: 'Pristine Clean Beauty Specular Grade',
+      audio: 'N/A — Stills Production',
+      aspect: '9:16 Vertical UHD',
+    },
+    featured: false,
+  },
 ];
