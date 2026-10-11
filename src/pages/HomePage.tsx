@@ -191,7 +191,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             animate="visible"
             variants={staggerContainer}
             style={{ y: heroTextY, opacity: heroTextOpacity }}
-            className="relative text-[2.75rem] xs:text-[3.5rem] sm:text-[5.5rem] md:text-[7.5rem] leading-[1.08] sm:leading-[1.05] font-semibold text-gray-900 tracking-tight z-10"
+            className="relative text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[5.25rem] lg:text-[6rem] leading-[1.08] sm:leading-[1.06] font-bold text-gray-900 tracking-tight z-10 max-w-4xl mx-auto"
           >
             {/* Floating Image 1 (Top Right) - Electric Cinema Blue Accent Border */}
             <motion.div 
@@ -237,7 +237,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           <motion.p
             variants={fadeInUp}
-            className="text-base xs:text-lg sm:text-2xl md:text-3xl text-gray-900 font-bold max-w-2xl sm:max-w-3xl mx-auto leading-relaxed font-sans px-4 sm:px-0 py-2 rounded-2xl bg-white/40 sm:bg-transparent backdrop-blur-[2px] sm:backdrop-blur-none"
+            className="text-base sm:text-xl md:text-2xl text-gray-800 font-bold max-w-2xl sm:max-w-3xl mx-auto leading-relaxed font-sans px-4 sm:px-0 py-2 rounded-2xl bg-white/40 sm:bg-transparent backdrop-blur-[2px] sm:backdrop-blur-none"
           >
             {t.hero.subheadline}
           </motion.p>
