@@ -20,6 +20,10 @@ import {
   LightbulbBoldDuotoneIcon,
   HeartBoldDuotoneIcon,
   BoltBoldDuotoneIcon,
+  LikeBoldDuotoneIcon,
+  DollarBoldDuotoneIcon,
+  HandMoneyBoldDuotoneIcon,
+  ChatRoundDotsBoldDuotoneIcon,
 } from '@solar-icons/react';
 import { HeroRemotionBackground } from '../components/remotion/HeroRemotionBackground';
 
@@ -269,23 +273,91 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="absolute inset-x-0 bottom-0 h-44 sm:h-56 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-[5]" />
       </section>
 
-      {/* 1.5 CLIENT LOGO MARQUEE */}
+      {/* 1.5 SOCIAL PROOF & PERFORMANCE MARQUEE (Likes, Revenue/Money & Engagement Comments) */}
       <motion.section 
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full bg-gray-50 py-12 border-y border-gray-100 overflow-hidden flex items-center"
+        className="w-full bg-gradient-to-r from-gray-50 via-white to-gray-50 py-7 sm:py-9 border-y border-gray-100 overflow-hidden flex items-center shadow-xs"
       >
-        <div className="animate-marquee flex items-center opacity-40 hover:opacity-100 transition-opacity duration-500">
-          {[...Array(3)].map((_, i) => (
+        <div className="animate-marquee flex items-center gap-6 sm:gap-10">
+          {[...Array(4)].map((_, i) => (
             <React.Fragment key={i}>
-              <span className="text-3xl md:text-4xl font-extrabold text-gray-400 mx-12 uppercase tracking-widest font-sans">Nike</span>
-              <span className="text-3xl md:text-4xl font-extrabold text-gray-400 mx-12 uppercase tracking-widest font-serif italic">Red Bull</span>
-              <span className="text-3xl md:text-4xl font-extrabold text-gray-400 mx-12 uppercase tracking-widest font-sans">Porsche</span>
-              <span className="text-3xl md:text-4xl font-extrabold text-gray-400 mx-12 uppercase tracking-widest font-sans">Samsung</span>
-              <span className="text-3xl md:text-4xl font-extrabold text-gray-400 mx-12 uppercase tracking-widest font-serif italic">Adidas</span>
-              <span className="text-3xl md:text-4xl font-extrabold text-gray-400 mx-12 uppercase tracking-widest font-sans">L'Oréal</span>
+              {/* 1. LIKES & VIRAL HEARTS */}
+              <div className="inline-flex items-center gap-2.5 sm:gap-3.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/90 border border-rose-200/70 shadow-[0_8px_20px_-8px_rgba(244,63,94,0.18)] shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-500 shadow-inner">
+                  <HeartBoldDuotoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-sm sm:text-base font-black text-gray-900 tracking-tight leading-none font-sans">
+                    +240K {language === 'tr' ? 'Beğeni' : 'Likes'}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-rose-600/90 tracking-wider uppercase font-sans mt-0.5">
+                    {language === 'tr' ? 'Viral Etkileşim' : 'Organic Reach'}
+                  </span>
+                </div>
+              </div>
+
+              {/* 2. MONEY & SALES REVENUE */}
+              <div className="inline-flex items-center gap-2.5 sm:gap-3.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/90 border border-emerald-200/70 shadow-[0_8px_20px_-8px_rgba(16,185,129,0.18)] shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 shadow-inner">
+                  <DollarBoldDuotoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-sm sm:text-base font-black text-gray-900 tracking-tight leading-none font-sans">
+                    4.8x {language === 'tr' ? 'Ciro & Satış' : 'ROAS / Revenue'}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-emerald-600/90 tracking-wider uppercase font-sans mt-0.5">
+                    {language === 'tr' ? 'Reklam Dönüşümü' : 'High Conversion'}
+                  </span>
+                </div>
+              </div>
+
+              {/* 3. COMMENTS & ENGAGEMENT */}
+              <div className="inline-flex items-center gap-2.5 sm:gap-3.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/90 border border-blue-200/70 shadow-[0_8px_20px_-8px_rgba(37,99,235,0.18)] shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shadow-inner">
+                  <ChatRoundDotsBoldDuotoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-sm sm:text-base font-black text-gray-900 tracking-tight leading-none font-sans">
+                    18.5K+ {language === 'tr' ? 'Yorum' : 'Comments'}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-blue-600/90 tracking-wider uppercase font-sans mt-0.5">
+                    {language === 'tr' ? 'Sadık Topluluk' : 'Audience Loyalty'}
+                  </span>
+                </div>
+              </div>
+
+              {/* 4. HIGH-INTENT LIKE / SAVE CONVERSIONS */}
+              <div className="inline-flex items-center gap-2.5 sm:gap-3.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/90 border border-purple-200/70 shadow-[0_8px_20px_-8px_rgba(147,51,234,0.18)] shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 shadow-inner">
+                  <LikeBoldDuotoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-sm sm:text-base font-black text-gray-900 tracking-tight leading-none font-sans">
+                    94.2% {language === 'tr' ? 'Pozitif Etkileşim' : 'Positive Signals'}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-purple-600/90 tracking-wider uppercase font-sans mt-0.5">
+                    {language === 'tr' ? 'Müşteri İlgisi' : 'Brand Affinity'}
+                  </span>
+                </div>
+              </div>
+
+              {/* 5. HAND MONEY / CLIENT REVENUE PIPELINE */}
+              <div className="inline-flex items-center gap-2.5 sm:gap-3.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/90 border border-amber-200/70 shadow-[0_8px_20px_-8px_rgba(245,158,11,0.18)] shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 shadow-inner">
+                  <HandMoneyBoldDuotoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-sm sm:text-base font-black text-gray-900 tracking-tight leading-none font-sans">
+                    ₺12.8M+ {language === 'tr' ? 'Oluşturulan Değer' : 'Value Generated'}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-amber-600/90 tracking-wider uppercase font-sans mt-0.5">
+                    {language === 'tr' ? 'Satış Getirisi' : 'Client Returns'}
+                  </span>
+                </div>
+              </div>
             </React.Fragment>
           ))}
         </div>
