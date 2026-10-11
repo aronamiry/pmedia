@@ -109,14 +109,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Left/Center Divider */}
           <div className="hidden md:block w-px h-5 bg-gray-200/80" />
 
-          {/* 2. CENTER PIECE: PM.Media Brand Mark in the Middle */}
+          {/* 2. CENTER PIECE: PM Media Brand Mark in the Middle */}
           <button
             onClick={() => handleNavClick('home')}
-            className="group relative flex items-center px-3 sm:px-5 py-1.5 sm:py-2 rounded-full hover:bg-black/5 transition-all duration-200 cursor-pointer focus:outline-none"
+            className="group relative flex items-center gap-2 px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full hover:bg-black/5 transition-all duration-200 cursor-pointer focus:outline-none"
+            aria-label="PM Media Home"
           >
-            <span className="text-base sm:text-lg font-black tracking-tight text-gray-950 font-sans group-hover:text-brand-blue transition-colors">
-              PM.Media
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="PM Media" 
+              className="h-6 sm:h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+            />
           </button>
 
           {/* Center/Right Divider */}
@@ -204,8 +207,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="fixed inset-0 z-40 bg-white/98 backdrop-blur-2xl pt-[max(5.5rem,calc(env(safe-area-inset-top,0px)+4rem))] pb-[max(2rem,calc(env(safe-area-inset-bottom,0px)+1.5rem))] px-6 flex flex-col justify-between overflow-y-auto"
           >
             <div className="flex flex-col space-y-2">
-              <div className="text-[11px] font-bold tracking-widest text-gray-400 uppercase font-sans px-4 pb-2 border-b border-gray-100">
-                {language === 'tr' ? 'MENÜ' : 'NAVIGATION'}
+              <div className="flex items-center justify-between px-4 pb-4 border-b border-gray-100">
+                <img 
+                  src="/logo.png" 
+                  alt="PM Media" 
+                  className="h-7 w-auto object-contain"
+                />
+                <span className="text-[11px] font-bold tracking-widest text-gray-400 uppercase font-sans">
+                  {language === 'tr' ? 'MENÜ' : 'NAVIGATION'}
+                </span>
               </div>
               {navItems.map((item) => {
                 const isActive = currentPage === item.id;

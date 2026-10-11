@@ -67,9 +67,17 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-12 pb-10 sm:pb-16 border-b border-gray-200">
           
           <div className="space-y-6 max-w-sm">
-            <span className="text-2xl font-bold tracking-tight text-gray-900 font-sans">
-              PM.Media
-            </span>
+            <button 
+              onClick={() => handleNav('home')} 
+              className="inline-block cursor-pointer focus:outline-none"
+              aria-label="PM Media"
+            >
+              <img 
+                src="/logo.png" 
+                alt="PM Media" 
+                className="h-9 w-auto object-contain"
+              />
+            </button>
             <p className="text-sm sm:text-base text-gray-700 font-bold leading-relaxed">
               {t.footer.manifesto}
             </p>
